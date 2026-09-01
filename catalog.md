@@ -14,6 +14,7 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`market-sizing-tam-sam-som`](skills/market-sizing-tam-sam-som/SKILL.md) | Builds a defensible market size estimate (Total/Serviceable/Obtainable) with assumptions shown explicitly. | "market size", "TAM", "how big is this opportunity" |
 | [`competitive-landscape-mapper`](skills/competitive-landscape-mapper/SKILL.md) | Structured side-by-side competitor comparison with sourcing and ownership verification. | "competitor comparison", "who else is in this space", "competitive landscape" |
 | [`root-cause-five-whys`](skills/root-cause-five-whys/SKILL.md) | Drills from a symptom down to root cause using 5-Whys / fishbone, so fixes address the actual problem. | "why did this happen", "root cause", "keep going wrong" |
+| [`plan-on-a-page`](skills/plan-on-a-page/SKILL.md) | Condenses a strategy or program into a single-page summary: vision, honest current state, 3-5 priorities, and what changes in people/process/systems. | "plan on a page", "one-page strategy summary", "condense this for leadership" |
 
 ## Client & stakeholder deliverables
 
@@ -23,7 +24,22 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`consulting-deck-storyliner`](skills/consulting-deck-storyliner/SKILL.md) | Outlines a slide deck with one storyline and one action-titled message per slide, MBB-style. | "deck outline", "structure this presentation", "slide flow" |
 | [`board-investor-memo`](skills/board-investor-memo/SKILL.md) | Drafts a structured board or investor update: progress, metrics, asks, risks. | "board update", "investor memo", "quarterly update" |
 | [`proposal-sow-drafter`](skills/proposal-sow-drafter/SKILL.md) | Drafts a client proposal or statement of work: scope, deliverables, timeline, fees, assumptions. | "write a proposal", "SOW", "scope this engagement" |
+| [`government-tender-response`](skills/government-tender-response/SKILL.md) | Drafts a government RFQ/RFT response structured around the published evaluation criteria, with standard compliance declarations. | "respond to this RFQ", "government tender", "RFT response" |
+| [`workshop-agenda-designer`](skills/workshop-agenda-designer/SKILL.md) | Designs a workshop (objectives, timed agenda, participation activities, facilitation notes) working backward from the required output. | "workshop agenda", "plan a strategic planning session", "facilitate a workshop" |
 | [`stakeholder-influence-map`](skills/stakeholder-influence-map/SKILL.md) | Maps stakeholders by influence vs. interest and suggests an engagement approach per stakeholder. | "stakeholder map", "who needs to be on board", "influence and interest" |
+| [`stakeholder-engagement-log`](skills/stakeholder-engagement-log/SKILL.md) | Maintains an ongoing, chronological log of stakeholder contact — who, when, why, outcome — as a project runs. | "engagement log", "track our stakeholder contact history", "who have we spoken to" |
+
+## Change & program management
+
+| Skill | Description | Triggers on |
+|---|---|---|
+| [`change-impact-assessment`](skills/change-impact-assessment/SKILL.md) | Assesses who and what is impacted by a planned change across process/systems/people/culture, before rollout. | "change impact assessment", "who's affected by this change", "CIA" |
+| [`change-management-roadmap`](skills/change-management-roadmap/SKILL.md) | Builds a change roadmap using ADKAR (Awareness, Desire, Knowledge, Ability, Reinforcement) so a change actually sticks. | "change management plan", "ADKAR", "change roadmap" |
+| [`change-readiness-assessment`](skills/change-readiness-assessment/SKILL.md) | Assesses real readiness for an upcoming change — capability, sentiment, communication reach — based on evidence, not assumption. | "readiness check", "training needs analysis", "are we ready for go-live" |
+| [`communication-engagement-plan`](skills/communication-engagement-plan/SKILL.md) | Builds a comms & engagement plan — audience, message, channel, sender, timing — tailored per segment, not one blanket message. | "communication plan", "engagement roadmap", "how do we tell people about this" |
+| [`raid-log-builder`](skills/raid-log-builder/SKILL.md) | Builds and maintains a RAID log (Risks, Assumptions, Issues, Dependencies) — the standard ongoing project-governance artifact. | "RAID log", "project governance tracking", "track our assumptions and dependencies" |
+| [`program-governance-structure`](skills/program-governance-structure/SKILL.md) | Defines decision-making forums, escalation paths, and a decision log for a program, right-sized to its actual complexity. | "governance structure", "decision rights", "escalation path" |
+| [`project-retrospective`](skills/project-retrospective/SKILL.md) | Runs a backward-looking retrospective on a completed project — what worked, what didn't, root causes, owned recommendations. | "retrospective", "lessons learned", "post-mortem on this project" |
 
 ## Research & intelligence
 
@@ -53,3 +69,4 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`okr-drafter`](skills/okr-drafter/SKILL.md) | Turns a goal into OKRs with measurable, falsifiable key results instead of vague aspirations. | "set OKRs", "turn this goal into targets", "quarterly goals" |
 | [`impact-effort-prioritizer`](skills/impact-effort-prioritizer/SKILL.md) | Scores a list of initiatives on impact vs. effort and recommends what to do first. | "what should we prioritize", "impact effort matrix", "what to do first" |
 | [`positioning-pitch-crafter`](skills/positioning-pitch-crafter/SKILL.md) | Sharpens a positioning statement or elevator pitch for a business or offering. | "elevator pitch", "positioning statement", "how do we describe what we do" |
+| [`capability-competency-matrix`](skills/capability-competency-matrix/SKILL.md) | Builds a role-based skills/development framework — what "good" looks like at each seniority level — for hiring and development conversations. | "competency framework", "skills matrix", "development framework for the team" |

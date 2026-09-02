@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Dependencies (in case a future project here uses npm)
+node_modules/
+
+# Secrets / local env files
+.env
+.env.local

@@ -218,6 +218,82 @@ body {
   .search-row { flex-wrap: wrap; }
 }
 
+/* --- quick start, by AI tool --- */
+
+.quickstart {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px clamp(16px, 3vw, 32px) 28px;
+  margin: 0 0 32px;
+}
+.quickstart h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.quickstart-intro {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  max-width: 70ch;
+  margin: 0 0 20px;
+}
+.quickstart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.quickstart-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.quickstart-card h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: var(--accent);
+}
+.quickstart-sub {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 400;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.quickstart-card ol {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+.quickstart-card li { margin-bottom: 8px; }
+.quickstart-card li:last-child { margin-bottom: 0; }
+.quickstart-card code {
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+.quickstart-more {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 18px 0 0;
+}
+.link-btn {
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* --- mindmap --- */
 
 .mindmap-figure {
@@ -253,6 +329,8 @@ body {
 .dl-all-row {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
   margin: 14px 0 32px;
 }
 
@@ -405,7 +483,7 @@ body {
 }
 .dl-link:hover { color: var(--cat-color, var(--accent)); border-color: var(--cat-color, var(--accent)); }
 .dl-link-cat { margin-left: auto; font-size: 12px; }
-.dl-link.copied { color: var(--accent); border-color: var(--accent); }
+.dl-link.copied, .ctrl-btn.copied { color: var(--accent); border-color: var(--accent); }
 .category-title::after { margin-left: 10px; }
 
 @media (max-width: 480px) {

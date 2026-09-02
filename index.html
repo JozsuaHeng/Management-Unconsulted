@@ -56,6 +56,51 @@
       </div>
     </header>
 
+    <section class="quickstart" aria-labelledby="quickstart-title">
+      <h2 id="quickstart-title">Quick start, by AI tool</h2>
+      <p class="quickstart-intro">Every skill below has a <strong>Copy</strong>
+        button. The fastest way to use one, on any of these, is: open a
+        skill, click Copy, paste it into a new chat with your question.
+        No install needed for any of them &mdash; the steps below are
+        only for making one happen automatically, without re-pasting.</p>
+      <div class="quickstart-grid">
+        <div class="quickstart-card">
+          <h3>Claude <span class="quickstart-sub">(web or desktop app)</span></h3>
+          <ol>
+            <li>Copy a skill, paste into a new chat with your question &mdash; works immediately.</li>
+            <li><strong>To make it automatic:</strong> Settings &rarr; Capabilities &rarr; turn on Code execution.</li>
+            <li>Download the skill's zip below, then Settings &rarr; Customize &rarr; Skills &rarr; Upload.</li>
+            <li>Switch it on &mdash; new uploads start off, easy to miss.</li>
+          </ol>
+        </div>
+        <div class="quickstart-card">
+          <h3>ChatGPT</h3>
+          <ol>
+            <li>Copy a skill, paste into a new chat with your question &mdash; works immediately.</li>
+            <li><strong>To make it automatic:</strong> build a Custom GPT and paste the skill in as its instructions/knowledge, once.</li>
+          </ol>
+        </div>
+        <div class="quickstart-card">
+          <h3>Gemini</h3>
+          <ol>
+            <li>Copy a skill, paste into a new chat with your question &mdash; works immediately.</li>
+            <li><strong>To make it automatic:</strong> create a Gem and paste the skill in as its instructions, once.</li>
+          </ol>
+        </div>
+        <div class="quickstart-card">
+          <h3>Claude Code <span class="quickstart-sub">(Terminal &mdash; skip unless you already use it)</span></h3>
+          <ol>
+            <li>Download the skill's zip (or "Download all 50" below) and unzip it.</li>
+            <li>Drag the folder into <code>~/.claude/skills/</code> in Finder, or run
+              <code>cp -r claude-skills-library/skills/* ~/.claude/skills/</code> in Terminal.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="quickstart-more">Want more detail, or hit a snag? The
+        <button type="button" class="link-btn" id="quickstart-open-guide">full step-by-step guide</button>
+        covers all of this with pictures-in-words for first-timers.</p>
+    </section>
+
     <figure class="mindmap-figure">
       <div class="mm-zoom-controls">
         <button type="button" id="mm-zoom-in" aria-label="Zoom in">+</button>
@@ -525,6 +570,7 @@
     </figure>
 
     <div class="dl-all-row">
+      <button type="button" id="copy-all" class="ctrl-btn" title="Copy all 50 skills as one block of text — for loading the whole library into a Custom GPT, a Gemini Gem, or a Claude Project as permanent knowledge, not for pasting into a single one-off chat">Copy all 50</button>
       <a href="dl/all-skills.zip" download class="ctrl-btn">&#8681; Download all 50</a>
     </div>
 

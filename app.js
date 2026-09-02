@@ -78,27 +78,45 @@
   }
   function closeSkillModal() { skillModal.hidden = true; }
 
-  // The "Copy" button is the zero-setup way to use a skill: no upload,
-  // no toggle, no Terminal — copy the text, paste it into a new chat
-  // (Claude, ChatGPT, Gemini, anything) along with your question. Falls
-  // back to a manual-select prompt on browsers/contexts where the
-  // clipboard API is unavailable (e.g. no HTTPS, older browsers).
-  skillModalCopy.addEventListener("click", function () {
+  // Shared by the per-skill "Copy" button and "Copy all 50" below: the
+  // zero-setup way to use this library, no upload/toggle/Terminal —
+  // copy text, paste into a new chat (Claude, ChatGPT, Gemini, anything)
+  // along with your question. Falls back to a manual-select prompt on
+  // browsers/contexts where the clipboard API is unavailable (no HTTPS,
+  // older browsers).
+  function copyToClipboard(text, btn, label) {
+    var original = btn.textContent;
     var showCopied = function () {
-      skillModalCopy.textContent = "Copied!";
-      skillModalCopy.classList.add("copied");
+      btn.textContent = label || "Copied!";
+      btn.classList.add("copied");
       window.setTimeout(function () {
-        skillModalCopy.textContent = "Copy";
-        skillModalCopy.classList.remove("copied");
+        btn.textContent = original;
+        btn.classList.remove("copied");
       }, 1800);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(currentSkillRaw).then(showCopied, function () {
-        window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", currentSkillRaw);
+      navigator.clipboard.writeText(text).then(showCopied, function () {
+        window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", text);
       });
     } else {
-      window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", currentSkillRaw);
+      window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", text);
     }
+  }
+
+  skillModalCopy.addEventListener("click", function () {
+    copyToClipboard(currentSkillRaw, skillModalCopy);
+  });
+
+  // "Copy all 50" concatenates every skill's raw text in one block —
+  // meant for loading the whole library as permanent knowledge into a
+  // Custom GPT, a Gemini Gem, or a Claude Project, not for pasting all
+  // 50 frameworks into a single one-off question.
+  var copyAllBtn = document.getElementById("copy-all");
+  copyAllBtn.addEventListener("click", function () {
+    var all = Array.prototype.map.call(document.querySelectorAll(".skill-raw"), function (el) {
+      return el.textContent;
+    }).join("\n\n---\n\n");
+    copyToClipboard(all, copyAllBtn, "Copied!");
   });
 
   document.querySelectorAll(".skill").forEach(function (card) {
@@ -324,6 +342,7 @@
   }
 
   document.getElementById("open-guide").addEventListener("click", openModal);
+  document.getElementById("quickstart-open-guide").addEventListener("click", openModal);
   document.querySelectorAll("[data-close]").forEach(function (el) {
     el.addEventListener("click", closeModal);
   });

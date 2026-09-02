@@ -268,6 +268,32 @@ site; only *rebuilding* needs that sibling folder present).
     `<button>`, so it picked up `background: none; cursor: pointer;` to
     strip default button chrome — the font/color/border rules already
     applied identically either way.
+  - **"Copy all 50" button** (`#copy-all`, next to "Download all 50"
+    below the mindmap) — concatenates every `.skill-raw` div's text
+    (separated by `\n\n---\n\n`) and copies the lot in one go. Shares
+    the same clipboard/fallback logic as the per-skill Copy button via a
+    `copyToClipboard(text, btn, label)` helper in `app.js` (both buttons
+    call it — added when this button was added, to avoid duplicating the
+    clipboard-write/prompt-fallback/"Copied!" logic a second time). This
+    is **not** meant for pasting all 50 frameworks into one chat message
+    — the button's `title` says so — it's for loading the *entire*
+    library as permanent background knowledge into something like a
+    ChatGPT Custom GPT, a Gemini Gem, or a Claude Project, where you want
+    the whole library available rather than one skill at a time.
+  - **"Quick start, by AI tool" section** (`.quickstart`, between the
+    hero and the mindmap) — a categorized, always-visible companion to
+    the "How to use this" modal, not a replacement for it: this is 4
+    short card-per-tool at-a-glance boxes (Claude, ChatGPT, Gemini,
+    Claude Code), the modal is the full walkthrough with troubleshooting
+    for someone who's stuck. Added because "which AI am I even using,
+    and does this work there" turned out to be a real, common first
+    question that shouldn't require opening a modal to answer — putting
+    it above the fold means a first-time visitor sees at a glance that
+    this isn't Claude-only. Its "full step-by-step guide" link
+    (`#quickstart-open-guide`) opens the same `#guide-modal` as the
+    hero's own "How to use this" button — both wired to the same
+    `openModal()` in `app.js`, so there's only one guide to keep in
+    sync, just two doors into it.
   - The **"How to use this"** button opens an in-page flip-card modal
     (8 cards, prev/next/dots) written for a genuinely non-technical
     reader. **Restructured around copy-paste as the default path**

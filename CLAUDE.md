@@ -246,32 +246,48 @@ site; only *rebuilding* needs that sibling folder present).
     regenerated (old zips deleted first) on every `build.py` run and
     must be committed — GitHub Pages serves it as static files, there's
     no build step on the hosting side.
+  - **"Copy" button in the skill popup header** (`#skill-modal-copy`,
+    next to the `.zip` link) — copies that skill's plain-text content
+    (title + description + body + any reference files) to the
+    clipboard, so it can be pasted straight into a new chat with any AI,
+    no upload/install step at all. Added because installing-as-a-Skill
+    (claude.ai upload, or the Claude Code folder) turned out to be
+    genuinely non-trivial for a first-time, non-technical user — several
+    silent failure points (newly uploaded skills start switched off with
+    no visible confirmation either way; unzip-then-upload has a "which
+    folder do I actually select" ambiguity) — while copy-paste has none
+    of that and works identically in Claude, ChatGPT, Gemini, or
+    anything else that takes text input. The raw text lives in a hidden
+    `.skill-raw` div per skill card (`build_skill()` in `build.py`,
+    HTML-escaped so it round-trips cleanly through `.textContent` in
+    `app.js` — deliberately a hidden element rather than a data
+    attribute, since some skills' raw text runs to several KB). Falls
+    back to `window.prompt()` with the text pre-selected if
+    `navigator.clipboard` isn't available (no HTTPS, older browser).
+    `.dl-link` (originally an `<a>`-only class) is now also used on this
+    `<button>`, so it picked up `background: none; cursor: pointer;` to
+    strip default button chrome — the font/color/border rules already
+    applied identically either way.
   - The **"How to use this"** button opens an in-page flip-card modal
-    (9 cards, prev/next/dots) written for a genuinely non-technical
-    reader, with real multi-paragraph elaboration per card. Card 2
-    explicitly names all three "Claudes" (claude.ai, Claude Desktop app,
-    Claude Code) up front, each its own short paragraph, not one dense
-    paragraph. Card 4 ("Getting a skill into that folder") presents
-    **two equally-valid paths as numbered sub-steps each** (1/2/3/4 for
-    Way 1, 1/2/3 for Way 2) rather than flowing prose: Way 1 is
-    Terminal-free (download the zip from this site, unzip, drag the
-    folder into `~/.claude/skills/` via Finder — added after Jozsua
-    asked whether Terminal was mandatory); Way 2 is the `cp` command,
-    and its step 3 now explicitly tells the reader to run
-    `ls ~/.claude/skills/` afterward and what they should see — Jozsua
-    tried the command himself and reported "there's nothing after
-    clicking enter," which the original "no news is good news" framing
-    didn't resolve for a first-timer. Card 8
-    (claude.ai/Desktop upload path) went through an elaborate pass and
-    then a simplification pass — Jozsua found the elaborate version too
-    long; it's now 3 short paragraphs covering the same facts (Desktop
-    = same as web, the correct **Settings → Customize → Skills →
-    Upload** path behind a **Code execution** capability toggle —
-    verified via live web search, an earlier draft had the path wrong —
-    and that uploaded skills start switched off). The last card's
-    "next" button shows a checkmark (`✓`, styled `.flip-btn-done`) on
-    the final card instead of the word "Done," which didn't fit the
-    circular button cleanly.
+    (8 cards, prev/next/dots) written for a genuinely non-technical
+    reader. **Restructured around copy-paste as the default path**
+    (card 2), not the original design where installing-as-a-Skill was
+    the main event — see the Copy button entry above for why: the
+    install path has real friction and silent-failure points for a true
+    beginner, while paste-it-in has none. Installing is now framed as an
+    explicitly optional "upgrade" (card 4) for someone who's used the
+    paste method a few times and wants Claude to reach for a skill
+    automatically instead of re-pasting it — split into claude.ai/
+    Desktop (card 5, still the friendlier of the two) and Claude Code
+    (card 6, deliberately compressed from what used to be two cards'
+    worth of detail, since Terminal is clearly not this guide's default
+    reader). Card 7 answers "does this work with ChatGPT/Gemini?"
+    directly: yes for copy-paste (it's just text), no for the
+    auto-install upgrade (that's a Claude-specific feature — Custom GPTs
+    / Gems are the rough equivalents there, not a drop-in). The last
+    card's "next" button shows a checkmark (`✓`, styled
+    `.flip-btn-done`) on the final card instead of the word "Done,"
+    which didn't fit the circular button cleanly.
   - The hero has title+tagline stacked full-width, then a second row
     (`.hero-bottom`) putting the tagline and the search/button controls
     as top-aligned flex siblings — the controls sit literally in line

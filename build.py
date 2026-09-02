@@ -214,15 +214,26 @@ def build_skill(slug, color):
     body_html = convert(body, heading_shift=0)
 
     refs_html = ""
+    raw_parts = [body.strip()]
     refs_dir = folder / "references"
     if refs_dir.is_dir():
         for ref_file in sorted(refs_dir.glob("*.md")):
             ref_text = ref_file.read_text().strip()
             ref_html = convert(ref_text, heading_shift=2)
             refs_html += f'<div class="reference">{ref_html}</div>'
+            raw_parts.append(ref_text)
 
     display_name = title_case(slug)
     search_blob = html.escape(f"{display_name} {desc}".lower(), quote=True)
+
+    # Plain-markdown copy of this skill (title + description + body +
+    # any reference files), for the "Copy" button in the skill popup —
+    # the simplest way to use a skill needs no install/upload at all,
+    # just this text pasted into a new chat with your question. Kept as
+    # a hidden element (read via .textContent in app.js, which decodes
+    # the HTML-escaping below back to the original text) rather than an
+    # HTML attribute, since some skills' raw text runs to several KB.
+    raw_text = "\n\n".join([f"# {display_name}", desc] + raw_parts)
 
     return f'''
       <div class="skill" id="{slug}" data-search="{search_blob}" data-skill-name="{html.escape(display_name)}" style="--cat-color:{color}">
@@ -236,6 +247,7 @@ def build_skill(slug, color):
           {body_html}
           {f'<h3 class="ref-heading">Deeper methodology &amp; worked examples</h3>{refs_html}' if refs_html else ''}
         </div>
+        <div class="skill-raw" hidden>{html.escape(raw_text)}</div>
       </div>'''
 
 

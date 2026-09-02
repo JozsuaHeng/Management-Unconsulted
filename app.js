@@ -64,6 +64,8 @@
   var skillModalTitle = document.getElementById("skill-modal-title");
   var skillModalBody = document.getElementById("skill-modal-body");
   var skillModalDl = document.getElementById("skill-modal-dl");
+  var skillModalCopy = document.getElementById("skill-modal-copy");
+  var currentSkillRaw = "";
 
   function openSkillModal(slug) {
     var el = document.getElementById(slug);
@@ -71,9 +73,33 @@
     skillModalTitle.textContent = el.getAttribute("data-skill-name") || slug;
     skillModalBody.innerHTML = el.querySelector(".skill-body").innerHTML;
     skillModalDl.href = "dl/" + slug + ".zip";
+    currentSkillRaw = el.querySelector(".skill-raw").textContent;
     skillModal.hidden = false;
   }
   function closeSkillModal() { skillModal.hidden = true; }
+
+  // The "Copy" button is the zero-setup way to use a skill: no upload,
+  // no toggle, no Terminal — copy the text, paste it into a new chat
+  // (Claude, ChatGPT, Gemini, anything) along with your question. Falls
+  // back to a manual-select prompt on browsers/contexts where the
+  // clipboard API is unavailable (e.g. no HTTPS, older browsers).
+  skillModalCopy.addEventListener("click", function () {
+    var showCopied = function () {
+      skillModalCopy.textContent = "Copied!";
+      skillModalCopy.classList.add("copied");
+      window.setTimeout(function () {
+        skillModalCopy.textContent = "Copy";
+        skillModalCopy.classList.remove("copied");
+      }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(currentSkillRaw).then(showCopied, function () {
+        window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", currentSkillRaw);
+      });
+    } else {
+      window.prompt("Copy this text (Cmd/Ctrl+C, then Enter):", currentSkillRaw);
+    }
+  });
 
   document.querySelectorAll(".skill").forEach(function (card) {
     var summary = card.querySelector(".skill-summary");

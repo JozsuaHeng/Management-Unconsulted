@@ -397,9 +397,15 @@ body {
   border-radius: 6px;
   padding: 2px 7px;
   white-space: nowrap;
+  /* .dl-link is also reused on the <button> "Copy" control below — a
+     <button> needs its default background/cursor reset to match the
+     <a> uses; the font/color/border rules above already apply either way. */
+  background: none;
+  cursor: pointer;
 }
 .dl-link:hover { color: var(--cat-color, var(--accent)); border-color: var(--cat-color, var(--accent)); }
 .dl-link-cat { margin-left: auto; font-size: 12px; }
+.dl-link.copied { color: var(--accent); border-color: var(--accent); }
 .category-title::after { margin-left: 10px; }
 
 @media (max-width: 480px) {

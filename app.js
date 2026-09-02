@@ -17,7 +17,7 @@
   themeBtn.addEventListener("click", function () {
     var next = currentTheme() === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    try { localStorage.setItem("vantage-point-theme", next); } catch (e) {}
+    try { localStorage.setItem("management-unconsulted-theme", next); } catch (e) {}
     syncThemeButton();
   });
   syncThemeButton();

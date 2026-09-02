@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 SKILLS_DIR = ROOT / ".." / "claude-skills-library" / "skills"
 
-SITE_NAME = "Vantage Point"  # change here to rename the mindmap's center label
+SITE_NAME = "Management Unconsulted"  # change here to rename the mindmap's center label
 
 CATEGORIES = [
     ("Strategic analysis", [
@@ -366,7 +366,7 @@ def build_mindmap():
     every element carries an animation-delay so the whole thing draws
     itself outward from the hub on load (see .mm-pop / .mm-line in
     style.css for the actual keyframes)."""
-    r_center = 118
+    r_center = 148  # wide enough for "Unconsulted" (the longest hub-text line) at HUB_FONT below
     r_cat_base, r_cat_jitter = 340, 20
     r_leaf_base, r_leaf_jitter = 640, 30
     RING_GAP, N_RINGS = 108, 4  # leaves cycle through 4 rings by index, see Phase 1

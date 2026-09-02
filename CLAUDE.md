@@ -1,4 +1,4 @@
-# CLAUDE.md — Vantage Point (Management Unconsulted)
+# CLAUDE.md — Management Unconsulted
 
 ## What this is
 
@@ -14,37 +14,47 @@ a browser.
 Naming history: built as "The Playbook" (`the-playbook/`), renamed to
 "Vantage Point" 2026-09-02, briefly renamed the same day to "The
 Quagmire" (which turned out to collide with the shelf's hub page, also
-called that — flagged at the time), then **reverted back to "Vantage
-Point"** shortly after on request ("this is called vantage point not the
-quagmire"). **"Vantage Point" is the settled site name** — don't rename
-it to Quagmire again without being asked explicitly a second time. It
-started life as a subfolder inside the `ai-slop/` repo (`ai-slop/vantage-
-point/`, published at `jozsuaheng.github.io/Random-projects/vantage-
-point/`), then was pulled out into its own standalone repo the same day
-— see below. To rename the *site*: update `SITE_NAME` in `build.py`
-(mindmap center label) and `index.html`'s `<title>`/`<h1>`/meta
-description.
+called that — flagged at the time), reverted back to "Vantage Point"
+shortly after on request ("this is called vantage point not the
+quagmire"), then renamed again the same day to **"Management
+Unconsulted"** once this project got pulled out into its own repo of
+that name (see below) — matching the repo/product name rather than
+having the repo and the live site disagree. **"Management Unconsulted"
+is the current settled site name** — the site's `<title>`/`<h1>`/mindmap
+hub text, the repo name, and the Quagmire hub tile's label are all meant
+to say the same thing; don't let them drift apart, and don't rename any
+one of them without updating the others. It started life as a subfolder
+inside the `ai-slop/` repo (`ai-slop/vantage-point/`, published at
+`jozsuaheng.github.io/Random-projects/vantage-point/`), then was pulled
+out into its own standalone repo the same day — see below. To rename the
+*site*: update `SITE_NAME` in `build.py` (mindmap center label, and
+`r_center` alongside it if the new name is longer — `text_width()`'s
+estimate for the widest hub-text line needs to fit inside `r_center`)
+and `index.html`'s `<title>`/`<h1>`. The `localStorage` key for the
+theme toggle (`management-unconsulted-theme`, in both `app.js` and the
+inline anti-flash script in `index.html`'s `<head>`) was also renamed to
+match — purely cosmetic (visitors never see the key name), but kept in
+sync for the same reason as everything else above.
 
 ## Where this fits in the shelf
 
-This is now an **independent, standalone project** — its own local
-folder (`management-unconsulted/`, a sibling of `ai-slop/` at the shelf
-root, not nested inside it), its own git repo, pushed to its own GitHub
-repo: **github.com/JozsuaHeng/Management-Unconsulted** (public). It is
-**not** part of the `ai-slop/`/"Random projects" repo or its shared git
-history — it was copied out (fresh files, not a history-preserving
-`git subtree`/`filter-repo` split, since `ai-slop/`'s history is shared
-across many unrelated projects and rewriting it wasn't warranted) and the
-original `ai-slop/vantage-point/` folder was deleted from that repo once
-this one was live.
+This is an **independent, standalone project** — its own local folder
+(`management-unconsulted/`, a sibling of `ai-slop/` at the shelf root,
+not nested inside it), its own git repo, pushed to its own GitHub repo:
+**github.com/JozsuaHeng/Management-Unconsulted** (public), live at
+**jozsuaheng.github.io/Management-Unconsulted/**. It is **not** part of
+the `ai-slop/`/"Random projects" repo or its shared git history — it was
+copied out (fresh files, not a history-preserving `git subtree`/
+`filter-repo` split, since `ai-slop/`'s history is shared across many
+unrelated projects and rewriting it wasn't warranted) and the original
+`ai-slop/vantage-point/` folder was deleted from that repo once this one
+was live.
 
 The **Quagmire hub page** (`ai-slop/index.html`, the neal.fun-style tile
-grid) still keeps its "Vantage Point" tile pointing at the *old*
-`Random-projects/vantage-point/` URL for now — Jozsua asked to leave that
-alone and will update the tile's link himself once this repo's GitHub
-Pages is set up and he has the new URL. **Don't touch that tile or its
-link without being asked** — it's a deliberate, temporary dangling link,
-not an oversight.
+grid) has a tile for this project (`data-theme="playbook"`) — its label
+and link were updated once the GitHub Pages URL above went live, so it
+now reads "Management Unconsulted" and points at
+`jozsuaheng.github.io/Management-Unconsulted/`, matching this site.
 
 This project still depends on a **sibling folder**, `claude-skills-
 library/` (one level up from this repo, at the shelf root — see
@@ -205,10 +215,11 @@ site; only *rebuilding* needs that sibling folder present).
     Category node circles/labels are deliberately bigger than leaf ones
     (`cat_r = 16` vs. a leaf's `4.5`, `CAT_FONT = 38` vs. `LEAF_FONT =
     28`) so the hub → 7-category structure reads at a glance before the
-    reader looks at any individual leaf. The hub's own "Vantage Point"
-    text (`HUB_FONT = 42`) and `r_center` (`118`, big enough that
-    `text_width()` for the widest line still sits well inside the hub
-    circle) went through the same size-up.
+    reader looks at any individual leaf. The hub's own site-name text
+    (`HUB_FONT = 42`) and `r_center` (`148` — sized for "Unconsulted,"
+    the longer of the two current lines, per `text_width()`'s estimate;
+    revisit this if `SITE_NAME` changes to something with a longer
+    single word) went through the same size-up.
   - **Skill cards open in a centered popup, not inline.** A skill card
     shows only name/description/download-link; clicking the card (or its
     "Read more →" button, or its mindmap leaf) opens `#skill-modal` with
@@ -275,7 +286,7 @@ site; only *rebuilding* needs that sibling folder present).
     dark mode via `prefers-color-scheme` plus a `[data-theme]` override
     hook (unused until now) — the toggle just wires that hook up: click
     flips `<html data-theme="…">` between `"light"`/`"dark"` and persists
-    the explicit choice to `localStorage` (`vantage-point-theme`); no
+    the explicit choice to `localStorage` (`management-unconsulted-theme`); no
     stored value falls back to the OS setting via the existing media
     query, it's never forced to one theme for a first-time visitor. A
     small **inline, render-blocking script in `<head>`** (before

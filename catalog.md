@@ -40,6 +40,19 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`raid-log-builder`](skills/raid-log-builder/SKILL.md) | Builds and maintains a RAID log (Risks, Assumptions, Issues, Dependencies) — the standard ongoing project-governance artifact. | "RAID log", "project governance tracking", "track our assumptions and dependencies" |
 | [`program-governance-structure`](skills/program-governance-structure/SKILL.md) | Defines decision-making forums, escalation paths, and a decision log for a program, right-sized to its actual complexity. | "governance structure", "decision rights", "escalation path" |
 | [`project-retrospective`](skills/project-retrospective/SKILL.md) | Runs a backward-looking retrospective on a completed project — what worked, what didn't, root causes, owned recommendations. | "retrospective", "lessons learned", "post-mortem on this project" |
+| [`rapid-decision-framework`](skills/rapid-decision-framework/SKILL.md) | Clarifies decision rights (not task ownership) using RAPID — who recommends, must agree, performs, gives input, and decides. | "who gets to decide", "RAPID framework", "this decision is stuck" |
+| [`benefits-realization-review`](skills/benefits-realization-review/SKILL.md) | Reviews whether a completed project actually delivered its promised benefits, months after go-live. | "benefits realization", "did this project actually work", "post-implementation review" |
+
+## Project methodologies (PM / BA frameworks)
+
+| Skill | Description | Triggers on |
+|---|---|---|
+| [`project-methodology-selector`](skills/project-methodology-selector/SKILL.md) | Recommends PRINCE2, PMBOK, Agile, Waterfall, or a hybrid based on the project's actual characteristics, not habit or fashion. | "which methodology should we use", "PRINCE2 vs Agile", "how should we run this project" |
+| [`prince2-project-structuring`](skills/prince2-project-structuring/SKILL.md) | Structures a project under PRINCE2: live business case, defined roles, staged tolerances, exception-based reporting. | "PRINCE2", "stage-gated governance", "management by exception" |
+| [`pmbok-project-planning`](skills/pmbok-project-planning/SKILL.md) | Plans a project using PMBOK's knowledge areas and a Work Breakdown Structure — the PMI/US-style counterpart to PRINCE2. | "PMBOK", "PMI", "work breakdown structure" |
+| [`agile-delivery-setup`](skills/agile-delivery-setup/SKILL.md) | Sets up Agile/Scrum delivery: backlog, sprints, ceremonies, roles, an enforced Definition of Done. | "set up Agile", "Scrum ceremonies", "sprint planning" |
+| [`waterfall-project-plan`](skills/waterfall-project-plan/SKILL.md) | Structures a sequential Waterfall plan: phases, gate criteria, formal change control. | "Waterfall plan", "phase-gate", "sequential project plan" |
+| [`babok-requirements-elicitation`](skills/babok-requirements-elicitation/SKILL.md) | Elicits and documents business requirements using BABOK discipline: technique selection, traceability, validation. | "BABOK", "elicit requirements", "business analysis" |
 
 ## Research & intelligence
 
@@ -48,6 +61,8 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`competitor-research-brief`](skills/competitor-research-brief/SKILL.md) | Structured secondary-research brief on a competitor with strict fact/estimate/assumption labeling. | "research this competitor", "what do we know about [company]" |
 | [`discovery-interview-kit`](skills/discovery-interview-kit/SKILL.md) | Generates a discovery interview guide, then synthesizes raw notes into themes afterward. | "interview guide", "customer discovery", "synthesize these interview notes" |
 | [`benchmark-comparator`](skills/benchmark-comparator/SKILL.md) | Compares your metrics/offering against named, cited benchmarks instead of vague "industry standard" claims. | "benchmark this", "how do we compare to industry", "is this normal" |
+| [`vendor-evaluation-scorecard`](skills/vendor-evaluation-scorecard/SKILL.md) | Weighted scorecard for comparing vendor/supplier proposals received, so selection is defensible, not a gut call. | "evaluate these vendor proposals", "vendor scorecard", "which supplier should we pick" |
+| [`data-insights-summarizer`](skills/data-insights-summarizer/SKILL.md) | Turns a dataset or survey export into decision-relevant insights, not a column-by-column restatement. | "summarize this data", "what does this survey tell us", "insights from this spreadsheet" |
 
 ## Financial & operational
 
@@ -57,6 +72,7 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`financial-ratio-reviewer`](skills/financial-ratio-reviewer/SKILL.md) | Sanity-checks basic financial statements and flags ratios that look off, explained in plain English. | "review these financials", "does this look healthy", "financial ratios" |
 | [`risk-register-builder`](skills/risk-register-builder/SKILL.md) | Builds a structured risk register: risk, likelihood, impact, mitigation, owner. | "what could go wrong", "risk register", "risk assessment" |
 | [`raci-matrix-generator`](skills/raci-matrix-generator/SKILL.md) | Generates a RACI (Responsible/Accountable/Consulted/Informed) matrix for a project. | "RACI", "who owns what", "roles and responsibilities" |
+| [`cost-benefit-analysis`](skills/cost-benefit-analysis/SKILL.md) | Builds a cost-benefit case for a proposed investment, with quantified and qualitative benefits kept clearly separate. | "cost-benefit analysis", "ROI case", "should we invest in this" |
 | [`process-map-simplifier`](skills/process-map-simplifier/SKILL.md) | Documents a current operational process step by step, then proposes a simplified version. | "map this process", "simplify our workflow", "process is too slow/complicated" |
 
 ## Business-owner day-to-day
@@ -69,4 +85,5 @@ open `skills/<name>/SKILL.md`. For how to install/use these, see `GUIDE.md`.
 | [`okr-drafter`](skills/okr-drafter/SKILL.md) | Turns a goal into OKRs with measurable, falsifiable key results instead of vague aspirations. | "set OKRs", "turn this goal into targets", "quarterly goals" |
 | [`impact-effort-prioritizer`](skills/impact-effort-prioritizer/SKILL.md) | Scores a list of initiatives on impact vs. effort and recommends what to do first. | "what should we prioritize", "impact effort matrix", "what to do first" |
 | [`positioning-pitch-crafter`](skills/positioning-pitch-crafter/SKILL.md) | Sharpens a positioning statement or elevator pitch for a business or offering. | "elevator pitch", "positioning statement", "how do we describe what we do" |
+| [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Structures negotiation prep: interests vs. positions, BATNA, walk-away point, multi-issue trades. | "negotiation prep", "BATNA", "preparing for a deal/contract negotiation" |
 | [`capability-competency-matrix`](skills/capability-competency-matrix/SKILL.md) | Builds a role-based skills/development framework — what "good" looks like at each seniority level — for hiring and development conversations. | "competency framework", "skills matrix", "development framework for the team" |

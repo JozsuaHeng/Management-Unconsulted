@@ -53,19 +53,26 @@ If you edit a skill later, edit the copy inside `claude-skills-library/`
 edit the live copy in `~/.claude/skills/` directly, or the two will drift
 and you'll lose track of what changed.
 
-## Using skills in claude.ai instead of Claude Code
+## Using skills in claude.ai or the Claude Desktop app instead of Claude Code
 
-Skills work a bit differently on claude.ai (the website/app, as opposed to
-this terminal tool):
+Skills work a bit differently here than in this terminal tool. The
+claude.ai website and the Claude Desktop app share the same account and
+the same Skills settings, so these steps are identical on both:
 
-1. Zip up a skill folder (e.g. `zip -r swot.zip swot-strategic-review`)
-2. In claude.ai, go to **Settings → Features → Skills** and upload the zip
-3. It needs "code execution" enabled, and only works on Pro/Max/Team/
-   Enterprise plans
+1. Make sure code execution is enabled first: **Settings → Capabilities**
+   → turn on "Code execution and file creation."
+2. Zip up a skill folder (e.g. `zip -r swot.zip swot-strategic-review`)
+   — the zip must contain the folder itself at its root, not a loose
+   `SKILL.md` file, or it won't be read correctly.
+3. In claude.ai (or Desktop), go to **Settings → Customize → Skills →
+   Upload** and select the zip. It reads the `SKILL.md` inside
+   automatically and shows the name/description.
+4. Newly uploaded skills are **off by default** — find it in your skills
+   list and toggle it on, or Claude won't use it.
 
-Skills uploaded to claude.ai are **separate** from Claude Code skills —
-uploading here doesn't sync there, and vice versa. If you want a skill
-available in both places, install it in both.
+Skills uploaded to claude.ai/Desktop are **separate** from Claude Code
+skills — uploading here doesn't sync there, and vice versa. If you want
+a skill available in both places, install it in both.
 
 ## How to actually use these day to day
 

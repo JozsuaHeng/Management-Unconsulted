@@ -56,8 +56,12 @@
       </div>
     </header>
 
-    <section class="quickstart" aria-labelledby="quickstart-title">
-      <h2 id="quickstart-title">Quick start, by AI tool</h2>
+    <details class="quickstart">
+      <summary class="quickstart-summary">
+        <span class="quickstart-summary-title">Quick start, by AI tool</span>
+        <span class="quickstart-summary-sub">Works with Claude, ChatGPT, Gemini &amp; more &mdash; tap to see how</span>
+      </summary>
+      <div class="quickstart-content">
       <p class="quickstart-intro">Every skill below has a <strong>Copy</strong>
         button. The fastest way to use one, on any of these, is: open a
         skill, click Copy, paste it into a new chat with your question.
@@ -99,7 +103,8 @@
       <p class="quickstart-more">Want more detail, or hit a snag? The
         <button type="button" class="link-btn" id="quickstart-open-guide">full step-by-step guide</button>
         covers all of this with pictures-in-words for first-timers.</p>
-    </section>
+      </div>
+    </details>
 
     <figure class="mindmap-figure">
       <div class="mm-zoom-controls">
@@ -588,7 +593,10 @@
         <div class="skill-summary">
           <span class="skill-name">MECE Problem Structuring</span>
           <span class="skill-desc">Breaks an ambiguous, open-ended business question into a MECE (Mutually Exclusive, Collectively Exhaustive) issue tree so every possible cause or option is captured once and only once. Use when the user asks a broad "why" or "what should we do" question, wants to structure a problem before analyzing it, or explicitly mentions MECE, an issue tree, or problem structuring.</span>
-          <a class="dl-link" href="dl/mece-problem-structuring.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/mece-problem-structuring.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="mece-problem-structuring">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -812,7 +820,10 @@ that&#x27;s what makes it MECE rather than just a list of ideas.</div>
         <div class="skill-summary">
           <span class="skill-name">SWOT Strategic Review</span>
           <span class="skill-desc">Runs a disciplined SWOT (Strengths, Weaknesses, Opportunities, Threats) analysis that forces every finding to connect to a strategic implication, instead of producing four disconnected bullet lists. Use when the user asks for a SWOT, wants to know "where do we stand," or is evaluating strategic position before a decision.</span>
-          <a class="dl-link" href="dl/swot-strategic-review.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/swot-strategic-review.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="swot-strategic-review">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -988,7 +999,10 @@ stops at description (no &quot;so what&quot;) is not finished.</div>
         <div class="skill-summary">
           <span class="skill-name">Porters Five Forces</span>
           <span class="skill-desc">Assesses competitive intensity in a market or industry across five forces (rivalry, buyer power, supplier power, threat of new entrants, threat of substitutes) to judge whether a market is structurally attractive to enter, defend, or exit. Use when evaluating market entry, industry attractiveness, or why margins in a market are compressed.</span>
-          <a class="dl-link" href="dl/porters-five-forces.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/porters-five-forces.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="porters-five-forces">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1171,7 +1185,10 @@ findings, not reuse these illustrative numbers.</div>
         <div class="skill-summary">
           <span class="skill-name">Business Model Canvas</span>
           <span class="skill-desc">Maps or redesigns a business's value proposition, customer segments, channels, relationships, revenue streams, key resources, activities, partners, and cost structure on one page. Use when the user wants to understand how a business makes money, evaluate a new business model, or redesign an existing offering.</span>
-          <a class="dl-link" href="dl/business-model-canvas.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/business-model-canvas.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="business-model-canvas">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1360,7 +1377,10 @@ tension rather than assuming the two coexist fine.</div>
         <div class="skill-summary">
           <span class="skill-name">Market Sizing TAM SAM SOM</span>
           <span class="skill-desc">Builds a defensible market size estimate broken into Total Addressable Market, Serviceable Addressable Market, and Serviceable Obtainable Market, with every assumption shown explicitly rather than presented as a known fact. Use when the user asks how big a market or opportunity is, wants a TAM/SAM/SOM estimate, or is sizing a new offering before investing in it.</span>
-          <a class="dl-link" href="dl/market-sizing-tam-sam-som.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/market-sizing-tam-sam-som.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="market-sizing-tam-sam-som">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1533,7 +1553,10 @@ real decision.</div>
         <div class="skill-summary">
           <span class="skill-name">Competitive Landscape Mapper</span>
           <span class="skill-desc">Builds a structured side-by-side comparison of named competitors — positioning, pricing, offering, and ownership — with sourcing discipline and verification of who actually owns/operates what. Use when the user wants a competitor comparison, asks "who else is in this space," or wants to understand the competitive landscape before a pricing or positioning decision.</span>
-          <a class="dl-link" href="dl/competitive-landscape-mapper.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/competitive-landscape-mapper.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="competitive-landscape-mapper">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1686,7 +1709,10 @@ guessing — an unverified claim stated as fact is worse than an honest gap.</di
         <div class="skill-summary">
           <span class="skill-name">Root Cause Five Whys</span>
           <span class="skill-desc">Drills from an observed symptom down to its root cause using the 5-Whys method (and a fishbone/cause-category checklist for more complex cases), so fixes address the actual problem instead of a surface symptom. Use when something is going wrong repeatedly, the user asks "why did this happen," or a fix keeps not working.</span>
-          <a class="dl-link" href="dl/root-cause-five-whys.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/root-cause-five-whys.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="root-cause-five-whys">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1853,7 +1879,10 @@ temporarily reassign inquiry handling to another available team member.</div>
         <div class="skill-summary">
           <span class="skill-name">Plan On A Page</span>
           <span class="skill-desc">Builds a single-page strategic or program summary — vision/purpose, honest current state, a small set of priorities, and how people/process/systems support them — the condensed visual format used to align a team or brief an executive audience in one view. Use when the user needs a "plan on a page," a one-page strategy summary, or a condensed visual of a strategy/program for leadership.</span>
-          <a class="dl-link" href="dl/plan-on-a-page.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/plan-on-a-page.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="plan-on-a-page">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -1996,7 +2025,10 @@ real, just not among the top 3-5 for this page).</div>
         <div class="skill-summary">
           <span class="skill-name">Executive Summary Writer</span>
           <span class="skill-desc">Converts analysis, research, or a long document into a one-page executive summary using the Pyramid Principle — leading with the answer/recommendation, then the supporting logic, then the detail. Use when the user needs to summarize findings for leadership, write a one-pager, or condense a long analysis into something a busy reader can act on quickly.</span>
-          <a class="dl-link" href="dl/executive-summary-writer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/executive-summary-writer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="executive-summary-writer">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2173,7 +2205,10 @@ immediately and the reasoning to trust it right after.</div>
         <div class="skill-summary">
           <span class="skill-name">Consulting Deck Storyliner</span>
           <span class="skill-desc">Outlines a slide deck with a single storyline and one clear, action-titled message per slide, in the style used by strategy consulting firms. Use when the user wants to structure a presentation, plan slide flow, or turn analysis into a deck outline before building actual slides.</span>
-          <a class="dl-link" href="dl/consulting-deck-storyliner.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/consulting-deck-storyliner.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="consulting-deck-storyliner">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2335,7 +2370,10 @@ competitors and GIC, dated.</div>
         <div class="skill-summary">
           <span class="skill-name">Board Investor Memo</span>
           <span class="skill-desc">Drafts a structured board or investor update memo covering progress, key metrics, risks, and specific asks. Use when the user needs to write a board update, investor update, or periodic (monthly/quarterly) stakeholder memo.</span>
-          <a class="dl-link" href="dl/board-investor-memo.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/board-investor-memo.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="board-investor-memo">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2490,7 +2528,10 @@ just an acknowledgment.</div>
         <div class="skill-summary">
           <span class="skill-name">Proposal SOW Drafter</span>
           <span class="skill-desc">Drafts a client proposal or statement of work, covering scope, deliverables, timeline, fees, and assumptions. Use when the user needs to write a consulting proposal, scope an engagement, draft a SOW, or respond to a client request for a project quote.</span>
-          <a class="dl-link" href="dl/proposal-sow-drafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/proposal-sow-drafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="proposal-sow-drafter">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2663,7 +2704,10 @@ awkward renegotiation once something unexpected comes up mid-engagement.
         <div class="skill-summary">
           <span class="skill-name">Government Tender Response</span>
           <span class="skill-desc">Drafts a response to a government RFQ or RFT (Request for Quote/Tender) — understanding of requirements, value proposition, capability and experience, commercial offer, and standard compliance declarations — following the structure procurement panels actually evaluate against. Use when the user needs to respond to a government tender, RFQ, or public-sector procurement request.</span>
-          <a class="dl-link" href="dl/government-tender-response.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/government-tender-response.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="government-tender-response">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2840,7 +2884,10 @@ evaluator&#x27;s score, not confident language.</div>
         <div class="skill-summary">
           <span class="skill-name">Workshop Agenda Designer</span>
           <span class="skill-desc">Designs a structured workshop — clear objectives, a timed agenda, participation-driving activities, and facilitation notes — for strategic planning sessions, kickoffs, or stakeholder workshops. Use when the user needs to plan or facilitate a workshop, design a workshop agenda, or run a strategic planning session.</span>
-          <a class="dl-link" href="dl/workshop-agenda-designer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/workshop-agenda-designer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="workshop-agenda-designer">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -2986,7 +3033,10 @@ written up and circulated within 2 business days while it&#x27;s still fresh.</d
         <div class="skill-summary">
           <span class="skill-name">Stakeholder Influence Map</span>
           <span class="skill-desc">Maps stakeholders on an influence-vs-interest grid and recommends an engagement approach for each one. Use when the user needs to identify who needs to be on board for a decision or change, plan how to communicate with different stakeholders, or navigate organizational buy-in.</span>
-          <a class="dl-link" href="dl/stakeholder-influence-map.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/stakeholder-influence-map.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="stakeholder-influence-map">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3147,7 +3197,10 @@ becoming more visible to their area).
         <div class="skill-summary">
           <span class="skill-name">Stakeholder Engagement Log</span>
           <span class="skill-desc">Maintains an ongoing, chronological log of stakeholder engagement — who was contacted, when, why, what was discussed, and what follow-up resulted — as a project runs. Use when the user needs to track engagement history over a project's life, log meeting outcomes with stakeholders, or wants a record of who's been engaged and about what, distinct from a one-time influence/interest map.</span>
-          <a class="dl-link" href="dl/stakeholder-engagement-log.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/stakeholder-engagement-log.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="stakeholder-engagement-log">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3274,7 +3327,10 @@ waiting for them to reach out first.</div>
         <div class="skill-summary">
           <span class="skill-name">Change Impact Assessment</span>
           <span class="skill-desc">Assesses who and what is impacted by a planned change (people, process, systems, culture) before it's rolled out, so change-management effort targets what actually needs it instead of guessing. Use when the user is planning a system rollout, process change, reorg, or any initiative that changes how people work, and needs to understand impact before building a change plan.</span>
-          <a class="dl-link" href="dl/change-impact-assessment.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/change-impact-assessment.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="change-impact-assessment">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3414,7 +3470,10 @@ platform&#x27;s integration details are confirmed.</div>
         <div class="skill-summary">
           <span class="skill-name">Change Management Roadmap</span>
           <span class="skill-desc">Builds a change management strategy and roadmap using the ADKAR model (Awareness, Desire, Knowledge, Ability, Reinforcement) so a change actually sticks after go-live instead of just being announced. Use when the user needs a change management plan or roadmap for a rollout, system implementation, or organisational change, or explicitly mentions ADKAR.</span>
-          <a class="dl-link" href="dl/change-management-roadmap.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/change-management-roadmap.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="change-management-roadmap">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3548,7 +3607,10 @@ one or two bookings a week to quietly go back into the old spreadsheet
         <div class="skill-summary">
           <span class="skill-name">Change Readiness Assessment</span>
           <span class="skill-desc">Assesses an organisation's or team's readiness for an upcoming change — capability gaps, sentiment, and support needs — based on real evidence rather than assumption, so the change plan addresses actual gaps. Use when the user wants to check readiness before a go-live, needs a training needs analysis, or wants to gauge how prepared people are for a change.</span>
-          <a class="dl-link" href="dl/change-readiness-assessment.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/change-readiness-assessment.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="change-readiness-assessment">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3679,7 +3741,10 @@ two-person team.</div>
         <div class="skill-summary">
           <span class="skill-name">Communication Engagement Plan</span>
           <span class="skill-desc">Builds a structured communication and engagement plan for a change or program — audience segments, key messages, channels, senders, and timing — so communication is targeted rather than one blanket message to everyone. Use when the user needs a comms plan, engagement roadmap, or is planning how to communicate a change to different audiences.</span>
-          <a class="dl-link" href="dl/communication-engagement-plan.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/communication-engagement-plan.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="communication-engagement-plan">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3812,7 +3877,10 @@ that isn&#x27;t big for them.</div>
         <div class="skill-summary">
           <span class="skill-name">RAID Log Builder</span>
           <span class="skill-desc">Builds and maintains a RAID log (Risks, Assumptions, Issues, Dependencies) — the standard project-governance artifact tracking what could go wrong, what's being assumed, what's already gone wrong, and what the project depends on. Use when the user needs a RAID log, project governance tracking, or wants to track assumptions and dependencies alongside risks, not just risks alone.</span>
-          <a class="dl-link" href="dl/raid-log-builder.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/raid-log-builder.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="raid-log-builder">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -3955,7 +4023,10 @@ discipline the skill calls out, not a new item created from scratch.</div>
         <div class="skill-summary">
           <span class="skill-name">Program Governance Structure</span>
           <span class="skill-desc">Defines the governance structure for a program or project — decision-making forums, escalation paths, meeting cadence, and a decision log — so decisions get made at the right level without every issue escalating to the top. Use when the user is setting up a new program or project and needs a governance model, decision rights, or an escalation structure.</span>
-          <a class="dl-link" href="dl/program-governance-structure.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/program-governance-structure.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="program-governance-structure">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4091,7 +4162,10 @@ here is the escalation triggers and the decision log, not forum count.</div>
         <div class="skill-summary">
           <span class="skill-name">Project Retrospective</span>
           <span class="skill-desc">Runs a structured retrospective on a completed project, program phase, or initiative — what worked, what didn't, root causes, and specific recommendations for next time — so lessons actually change future work instead of being filed away. Use when a project or phase has just finished and the user wants a retrospective, lessons-learned review, or post-mortem (backward-looking; for a forward-looking pre-decision version, see pre-mortem-facilitator).</span>
-          <a class="dl-link" href="dl/project-retrospective.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/project-retrospective.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="project-retrospective">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4238,7 +4312,10 @@ worth the extra step of checking before assuming the obvious explanation.</div>
         <div class="skill-summary">
           <span class="skill-name">Rapid Decision Framework</span>
           <span class="skill-desc">Clarifies decision-making roles using the RAPID framework (Recommend, Agree, Perform, Input, Decide) — who proposes, who must sign off, who executes, who's consulted, and who holds final decision authority. Use when a decision has stalled because ownership is unclear, or to clarify decision rights specifically — distinct from raci-matrix-generator, which covers task/work ownership, not who gets to decide.</span>
-          <a class="dl-link" href="dl/rapid-decision-framework.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/rapid-decision-framework.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="rapid-decision-framework">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4352,7 +4429,10 @@ having exactly one clear &quot;Decide&quot; holder, not padding out every role.<
         <div class="skill-summary">
           <span class="skill-name">Benefits Realization Review</span>
           <span class="skill-desc">Reviews whether a completed project or program actually delivered the benefits it was originally justified by, comparing promised outcomes to what really happened months after go-live. Use when a project has been live for a while and the user wants to check whether it achieved what it promised, or needs a benefits realization report — distinct from project-retrospective, which reviews delivery process rather than outcomes.</span>
-          <a class="dl-link" href="dl/benefits-realization-review.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/benefits-realization-review.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="benefits-realization-review">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4478,7 +4558,10 @@ next business case should be written.</div>
         <div class="skill-summary">
           <span class="skill-name">Project Methodology Selector</span>
           <span class="skill-desc">Helps choose which delivery methodology — PRINCE2, PMBOK, Agile/Scrum, Waterfall, or a hybrid — actually fits a specific project's characteristics, instead of defaulting to whichever one the team already knows. Use when starting a new project and unsure which methodology to use, comparing PRINCE2 vs Agile vs Waterfall, or needing a justified case for a delivery approach.</span>
-          <a class="dl-link" href="dl/project-methodology-selector.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/project-methodology-selector.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="project-methodology-selector">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4614,7 +4697,10 @@ PRINCE2 approach could be reconsidered.</div>
         <div class="skill-summary">
           <span class="skill-name">PRINCE2 Project Structuring</span>
           <span class="skill-desc">Structures a project using PRINCE2 (Projects IN Controlled Environments) — a live business case, clearly separated governance roles, stages with defined tolerances, and exception-based reporting. Use when the user needs a PRINCE2-structured project plan, mentions PRINCE2, or needs formal stage-gated governance with tolerances (common in UK/ANZ public-sector work).</span>
-          <a class="dl-link" href="dl/prince2-project-structuring.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/prince2-project-structuring.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="prince2-project-structuring">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4762,7 +4848,10 @@ rather than defaulting to constant escalation.</div>
         <div class="skill-summary">
           <span class="skill-name">PMBOK Project Planning</span>
           <span class="skill-desc">Plans a project using the PMBOK framework's knowledge areas (scope, schedule, cost, quality, risk, resources, communications, procurement, stakeholders) and process groups — the PMI/US-style counterpart to PRINCE2. Use when the user needs a PMBOK-structured project plan, mentions PMI/PMBOK, or wants a knowledge-area-based planning approach.</span>
-          <a class="dl-link" href="dl/pmbok-project-planning.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/pmbok-project-planning.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="pmbok-project-planning">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -4913,7 +5002,10 @@ that detail from scratch.</div>
         <div class="skill-summary">
           <span class="skill-name">Agile Delivery Setup</span>
           <span class="skill-desc">Sets up an Agile/Scrum delivery structure — a groomed backlog, sprint cadence, ceremonies (standup, planning, review, retro), clearly separated roles, and an enforced Definition of Done. Use when the user needs to set up Agile/Scrum delivery, structure a backlog and sprints, or asks about Agile ceremonies and roles.</span>
-          <a class="dl-link" href="dl/agile-delivery-setup.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/agile-delivery-setup.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="agile-delivery-setup">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5072,7 +5164,10 @@ time, which is one of the most common ways Agile ceremonies decay.</div>
         <div class="skill-summary">
           <span class="skill-name">Waterfall Project Plan</span>
           <span class="skill-desc">Structures a traditional sequential (Waterfall) project plan — phases with clear deliverables, gate reviews between phases, formal sign-off, and change control — for projects with stable, well-understood requirements. Use when the user needs a Waterfall or phase-gate project plan, or is planning a project with fixed, well-defined requirements upfront.</span>
-          <a class="dl-link" href="dl/waterfall-project-plan.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/waterfall-project-plan.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="waterfall-project-plan">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5196,7 +5291,10 @@ a process preference.</div>
         <div class="skill-summary">
           <span class="skill-name">BABOK Requirements Elicitation</span>
           <span class="skill-desc">Elicits and documents business requirements using BABOK (Business Analysis Body of Knowledge) discipline — targeted stakeholder analysis, elicitation techniques matched to the situation, structured and traceable requirements documentation. Use when the user needs to gather or document business requirements, run a requirements elicitation process, or mentions BABOK or business analysis.</span>
-          <a class="dl-link" href="dl/babok-requirements-elicitation.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/babok-requirements-elicitation.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="babok-requirements-elicitation">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5338,7 +5436,10 @@ process this technique is meant to catch.</div>
         <div class="skill-summary">
           <span class="skill-name">Competitor Research Brief</span>
           <span class="skill-desc">Produces a structured secondary-research brief on a single named competitor, with strict fact/estimate/assumption labeling and sourcing. Use when the user wants deep research on one specific competitor, asks "what do we know about [company]," or needs a research brief before a strategic decision.</span>
-          <a class="dl-link" href="dl/competitor-research-brief.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/competitor-research-brief.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="competitor-research-brief">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5494,7 +5595,10 @@ the extra minute up front.</div>
         <div class="skill-summary">
           <span class="skill-name">Discovery Interview Kit</span>
           <span class="skill-desc">Generates a discovery interview guide (for customers, clients, or stakeholders) before interviews happen, and synthesizes raw notes or transcripts into themes afterward. Use when the user needs an interview guide, customer/client discovery questions, or wants to synthesize interview notes into findings.</span>
-          <a class="dl-link" href="dl/discovery-interview-kit.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/discovery-interview-kit.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="discovery-interview-kit">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5689,7 +5793,10 @@ pattern; worth watching in future interviews rather than acting on now.</div>
         <div class="skill-summary">
           <span class="skill-name">Benchmark Comparator</span>
           <span class="skill-desc">Compares a business's own metrics or offering against named, cited benchmarks instead of vague "industry standard" claims. Use when the user asks how they compare to industry, whether a number is normal, or wants to benchmark performance/pricing against known reference points.</span>
-          <a class="dl-link" href="dl/benchmark-comparator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/benchmark-comparator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="benchmark-comparator">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5855,7 +5962,10 @@ not a precise ranking.</div>
         <div class="skill-summary">
           <span class="skill-name">Vendor Evaluation Scorecard</span>
           <span class="skill-desc">Builds a weighted scorecard for evaluating and comparing vendor or supplier proposals received, so a selection decision is defensible rather than a gut call. Use when the user is choosing between vendor/supplier proposals, evaluating RFP responses received, or needs a vendor selection scorecard — distinct from writing a tender response.</span>
-          <a class="dl-link" href="dl/vendor-evaluation-scorecard.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/vendor-evaluation-scorecard.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="vendor-evaluation-scorecard">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -5975,7 +6085,10 @@ resolve the accounting-sync workaround within the first quarter.</div>
         <div class="skill-summary">
           <span class="skill-name">Data Insights Summarizer</span>
           <span class="skill-desc">Turns a dataset, survey export, or KPI report into a structured summary of what actually matters — key findings, notable patterns, and what's not clear from the data — instead of just restating numbers. Use when the user has raw data (survey results, a KPI export, a spreadsheet) and wants it summarized into insights, not just described.</span>
-          <a class="dl-link" href="dl/data-insights-summarizer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/data-insights-summarizer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="data-insights-summarizer">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6123,7 +6236,10 @@ confirm before making a pricing decision based on this alone.</div>
         <div class="skill-summary">
           <span class="skill-name">Unit Economics Breakdown</span>
           <span class="skill-desc">Breaks revenue and cost down per unit (per trip, per guest, per customer, per order) to show what's actually profitable, separating fixed from variable costs. Use when the user wants to know if a specific offering, trip, or customer segment is actually profitable, or wants to compare profitability across offerings.</span>
-          <a class="dl-link" href="dl/unit-economics-breakdown.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/unit-economics-breakdown.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="unit-economics-breakdown">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6290,7 +6406,10 @@ answer than the raw margin percentage would suggest on its own.</div>
         <div class="skill-summary">
           <span class="skill-name">Financial Ratio Reviewer</span>
           <span class="skill-desc">Sanity-checks basic financial statements and calculates/explains key ratios (liquidity, profitability, efficiency) in plain English, flagging anything that looks off. Use when the user wants a financial statement reviewed, asks if their numbers look healthy, or wants financial ratios calculated and explained.</span>
-          <a class="dl-link" href="dl/financial-ratio-reviewer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/financial-ratio-reviewer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="financial-ratio-reviewer">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6476,7 +6595,10 @@ paper.
         <div class="skill-summary">
           <span class="skill-name">Risk Register Builder</span>
           <span class="skill-desc">Builds a structured risk register — risk, likelihood, impact, mitigation, and owner — for a project, decision, or ongoing operation. Use when the user asks what could go wrong, wants a risk assessment, or needs to document risks before a decision or launch.</span>
-          <a class="dl-link" href="dl/risk-register-builder.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/risk-register-builder.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="risk-register-builder">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6627,7 +6749,10 @@ to eliminate it.</div>
         <div class="skill-summary">
           <span class="skill-name">RACI Matrix Generator</span>
           <span class="skill-desc">Generates a RACI (Responsible, Accountable, Consulted, Informed) matrix for a project or initiative, clarifying who does the work, who owns the outcome, who must be consulted, and who just needs to be kept informed. Use when the user needs to clarify roles and responsibilities, asks "who owns what," or a project has role confusion or duplicated/dropped work.</span>
-          <a class="dl-link" href="dl/raci-matrix-generator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/raci-matrix-generator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="raci-matrix-generator">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6758,7 +6883,10 @@ everywhere.</div>
         <div class="skill-summary">
           <span class="skill-name">Process Map Simplifier</span>
           <span class="skill-desc">Documents a current operational process step by step, then proposes a simplified version by identifying redundant, delayed, or unnecessary steps. Use when the user wants to map out how a process currently works, says a workflow is too slow or complicated, or wants to simplify an existing process.</span>
-          <a class="dl-link" href="dl/process-map-simplifier.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/process-map-simplifier.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="process-map-simplifier">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -6934,7 +7062,10 @@ calendar) can still be done immediately as a smaller, standalone win.</div>
         <div class="skill-summary">
           <span class="skill-name">Cost Benefit Analysis</span>
           <span class="skill-desc">Builds a structured cost-benefit case for a proposed investment or initiative — quantified costs, quantified and qualitative benefits kept clearly separate, and a stated net position with sensitivity — so a go/no-go decision rests on an honest comparison, not optimism. Use when the user needs to justify an investment, build a business case with costs and benefits, or wants a CBA/ROI analysis.</span>
-          <a class="dl-link" href="dl/cost-benefit-analysis.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/cost-benefit-analysis.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="cost-benefit-analysis">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7097,7 +7228,10 @@ independently.</div>
         <div class="skill-summary">
           <span class="skill-name">Meeting Notes To Actions</span>
           <span class="skill-desc">Turns raw meeting notes or a transcript into a clean record of decisions made and action items with owners and dates. Use when the user has meeting notes/transcript to process, asks what was decided, or wants action items pulled out of a conversation.</span>
-          <a class="dl-link" href="dl/meeting-notes-to-actions.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/meeting-notes-to-actions.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="meeting-notes-to-actions">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7246,7 +7380,10 @@ have no assigned owner, which is flagged rather than guessed.</div>
         <div class="skill-summary">
           <span class="skill-name">Weekly Ops Report</span>
           <span class="skill-desc">Turns scattered updates, notes, or raw information into a structured weekly business operations report. Use when the user wants to summarize the week, write an ops update, or turn loose notes into a regular team report.</span>
-          <a class="dl-link" href="dl/weekly-ops-report.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/weekly-ops-report.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="weekly-ops-report">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7401,7 +7538,10 @@ sit inside a generic bullet.</div>
         <div class="skill-summary">
           <span class="skill-name">Pre Mortem Facilitator</span>
           <span class="skill-desc">Runs a pre-mortem before a big decision, launch, or commitment — imagines it already failed, then works backward to surface risks while there's still time to act on them. Use when the user is about to make a significant decision or launch and wants to pressure-test it, or explicitly asks for a pre-mortem.</span>
-          <a class="dl-link" href="dl/pre-mortem-facilitator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/pre-mortem-facilitator.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="pre-mortem-facilitator">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7575,7 +7715,10 @@ consciously accepted rather than forced into an unnecessary mitigation.</div>
         <div class="skill-summary">
           <span class="skill-name">OKR Drafter</span>
           <span class="skill-desc">Turns a broad goal into OKRs (Objectives and Key Results) with measurable, falsifiable key results instead of vague aspirations. Use when the user wants to set quarterly/periodic goals, turn a goal into targets, or explicitly asks for OKRs.</span>
-          <a class="dl-link" href="dl/okr-drafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/okr-drafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="okr-drafter">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7725,7 +7868,10 @@ outcome even though it isn&#x27;t a percentage.</div>
         <div class="skill-summary">
           <span class="skill-name">Impact Effort Prioritizer</span>
           <span class="skill-desc">Scores a list of initiatives, ideas, or fixes on impact versus effort and recommends what to tackle first. Use when the user has more ideas or possible initiatives than time to do them all and needs help deciding what to prioritize.</span>
-          <a class="dl-link" href="dl/impact-effort-prioritizer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/impact-effort-prioritizer.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="impact-effort-prioritizer">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -7875,7 +8021,10 @@ different action than either &quot;do first&quot; or &quot;don&#x27;t do.&quot;<
         <div class="skill-summary">
           <span class="skill-name">Positioning Pitch Crafter</span>
           <span class="skill-desc">Sharpens a positioning statement or elevator pitch for a business, product, or consulting offering, making clear who it's for, what it does, and why it beats the alternative. Use when the user wants to refine how they describe what they do, needs an elevator pitch, or is working on positioning for a business or offering.</span>
-          <a class="dl-link" href="dl/positioning-pitch-crafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/positioning-pitch-crafter.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="positioning-pitch-crafter">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -8022,7 +8171,10 @@ alternative type of competitor).</div>
         <div class="skill-summary">
           <span class="skill-name">Negotiation Prep</span>
           <span class="skill-desc">Structures preparation for a negotiation — each side's underlying interests (not just stated positions), BATNA and walk-away points, and possible multi-issue trades — using an interest-based negotiation approach. Use when the user is preparing for a negotiation (contract, deal, supplier terms, salary) or mentions BATNA or a walk-away point.</span>
-          <a class="dl-link" href="dl/negotiation-prep.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/negotiation-prep.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="negotiation-prep">Read more &rarr;</button>
         <div class="skill-body" hidden>
@@ -8154,7 +8306,10 @@ repeating the price ask.</div>
         <div class="skill-summary">
           <span class="skill-name">Capability Competency Matrix</span>
           <span class="skill-desc">Builds a role-based competency or development framework — the skills expected at each seniority level for a team's roles — used for hiring bars, performance conversations, and staff development planning. Use when the user needs a skills matrix, competency framework, or development framework for staff or team roles.</span>
-          <a class="dl-link" href="dl/capability-competency-matrix.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/capability-competency-matrix.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="capability-competency-matrix">Read more &rarr;</button>
         <div class="skill-body" hidden>

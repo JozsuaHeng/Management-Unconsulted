@@ -268,6 +268,20 @@ site; only *rebuilding* needs that sibling folder present).
     `<button>`, so it picked up `background: none; cursor: pointer;` to
     strip default button chrome — the font/color/border rules already
     applied identically either way.
+  - **A second Copy button lives on the collapsed card itself**
+    (`.copy-btn` inside `.skill-summary .skill-actions`, stacked under
+    the "⬇ .zip" link) — so copying a skill doesn't require opening
+    "Read more" first. `.skill-actions` wraps both buttons in an
+    absolutely-positioned flex column (replacing the old single
+    `.skill-summary .dl-link` absolute-position rule) since there are
+    now two stacked controls, not one. Both this button and `readMore`/
+    `summary` share the same click target area, so `onclick="event.
+    stopPropagation()"` on the button (same pattern the `.zip` link
+    already used) stops a copy-click from also opening the modal
+    underneath it. Wired in `app.js`'s existing per-card `.skill`
+    loop, reading that same card's `.skill-raw` text and calling the
+    shared `copyToClipboard()` helper — no separate logic from the
+    modal's own Copy button.
   - **"Copy all 50" button** (`#copy-all`, next to "Download all 50"
     below the mindmap) — concatenates every `.skill-raw` div's text
     (separated by `\n\n---\n\n`) and copies the lot in one go. Shares
@@ -280,16 +294,21 @@ site; only *rebuilding* needs that sibling folder present).
     library as permanent background knowledge into something like a
     ChatGPT Custom GPT, a Gemini Gem, or a Claude Project, where you want
     the whole library available rather than one skill at a time.
-  - **"Quick start, by AI tool" section** (`.quickstart`, between the
-    hero and the mindmap) — a categorized, always-visible companion to
-    the "How to use this" modal, not a replacement for it: this is 4
-    short card-per-tool at-a-glance boxes (Claude, ChatGPT, Gemini,
-    Claude Code), the modal is the full walkthrough with troubleshooting
-    for someone who's stuck. Added because "which AI am I even using,
-    and does this work there" turned out to be a real, common first
-    question that shouldn't require opening a modal to answer — putting
-    it above the fold means a first-time visitor sees at a glance that
-    this isn't Claude-only. Its "full step-by-step guide" link
+  - **"Quick start, by AI tool" section** (`<details class="quickstart">`,
+    between the hero and the mindmap) — a categorized companion to the
+    "How to use this" modal, not a replacement for it: this is 4 short
+    card-per-tool at-a-glance boxes (Claude, ChatGPT, Gemini, Claude
+    Code), the modal is the full walkthrough with troubleshooting for
+    someone who's stuck. Added because "which AI am I even using, and
+    does this work there" turned out to be a real, common first question
+    that shouldn't require opening a modal to answer. **Collapsed by
+    default** (plain `<details>`/`<summary>`, same pattern as
+    `.category` below, no extra JS needed) — it was originally
+    always-expanded and sitting above the mindmap, which pushed the
+    page's actual centerpiece too far down; the `<summary>` itself
+    states the key fact ("Works with Claude, ChatGPT, Gemini & more")
+    so that headline claim still lands even for a visitor who never
+    expands it. Its "full step-by-step guide" link
     (`#quickstart-open-guide`) opens the same `#guide-modal` as the
     hero's own "How to use this" button — both wired to the same
     `openModal()` in `app.js`, so there's only one guide to keep in

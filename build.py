@@ -240,7 +240,10 @@ def build_skill(slug, color):
         <div class="skill-summary">
           <span class="skill-name">{display_name}</span>
           <span class="skill-desc">{inline(desc)}</span>
-          <a class="dl-link" href="dl/{slug}.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+          <div class="skill-actions">
+            <a class="dl-link" href="dl/{slug}.zip" download title="Download this skill's folder as a .zip" onclick="event.stopPropagation()">&#8681; .zip</a>
+            <button type="button" class="dl-link copy-btn" title="Copy this skill's instructions — paste into any AI chat, no install needed" onclick="event.stopPropagation()">Copy</button>
+          </div>
         </div>
         <button type="button" class="read-more" data-skill="{slug}">Read more &rarr;</button>
         <div class="skill-body" hidden>

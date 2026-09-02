@@ -122,9 +122,16 @@
   document.querySelectorAll(".skill").forEach(function (card) {
     var summary = card.querySelector(".skill-summary");
     var readMore = card.querySelector(".read-more");
+    var copyBtn = card.querySelector(".copy-btn");
     var slug = card.id;
     summary.addEventListener("click", function () { openSkillModal(slug); });
     readMore.addEventListener("click", function () { openSkillModal(slug); });
+    // Lets someone copy a skill straight from the collapsed card, no
+    // need to open "Read more" first — the modal's own Copy button
+    // (above) covers the same need for someone who's already in there.
+    copyBtn.addEventListener("click", function () {
+      copyToClipboard(card.querySelector(".skill-raw").textContent, copyBtn);
+    });
   });
   skillModal.querySelectorAll("[data-close]").forEach(function (el) {
     el.addEventListener("click", closeSkillModal);

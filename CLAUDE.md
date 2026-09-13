@@ -56,14 +56,13 @@ and link were updated once the GitHub Pages URL above went live, so it
 now reads "Management Unconsulted" and points at
 `jozsuaheng.github.io/Management-Unconsulted/`, matching this site.
 
-This project still depends on a **sibling folder**, `claude-skills-
-library/` (one level up from this repo, at the shelf root — see
-`build.py`'s `SKILLS_DIR`), for its actual skill content. That
-dependency did *not* move — only the generated website did. If this
-repo is ever cloned onto a machine that doesn't also have the shelf's
-`claude-skills-library/` folder as a sibling, `build.py` won't run (the
-already-built `index.html` + `dl/*.zip` still work fine as a static
-site; only *rebuilding* needs that sibling folder present).
+`claude-skills-library/` (the actual skill content — see `build.py`'s
+`SKILLS_DIR`) now lives as a **subfolder of this repo**
+(`management-unconsulted/claude-skills-library/`), merged in via `git
+subtree` on 2026-09-13 to preserve its original commit history rather
+than starting fresh. It previously lived as a sibling folder one level
+up at the shelf root, outside this repo entirely — that arrangement is
+gone; don't re-add a `../claude-skills-library` path to `build.py`.
 
 - `index.html` + `style.css` + `app.js`: the catalog page (client-side
   search filter only, no backend).
@@ -386,7 +385,7 @@ site; only *rebuilding* needs that sibling folder present).
 ## Keeping it in sync
 
 This site is a **generated copy**, not the source of truth. If a skill in
-`claude-skills-library/skills/` (sibling folder, one level up — see
+`claude-skills-library/skills/` (subfolder of this repo — see
 "Where this fits in the shelf" above) changes (content edited, a skill
 added or removed), regenerate this page:
 

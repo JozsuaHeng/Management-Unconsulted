@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 Builds index.html for Vantage Point from the SKILL.md (+ references/*.md)
-files in ../claude-skills-library/skills/ (a sibling folder in the same
-shelf, NOT part of this repo). Re-run this after editing any skill there
-— it regenerates both the mindmap SVG and the category/skill content,
-each between their own START/END markers in index.html, leaving
-everything else (head, styles, script tag, flipchart modal) untouched.
+files in claude-skills-library/skills/ (a subfolder of this repo).
+Re-run this after editing any skill there — it regenerates both the
+mindmap SVG and the category/skill content, each between their own
+START/END markers in index.html, leaving everything else (head, styles,
+script tag, flipchart modal) untouched.
 
 Usage: python3 build.py
 """
@@ -15,7 +15,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SKILLS_DIR = ROOT / ".." / "claude-skills-library" / "skills"
+SKILLS_DIR = ROOT / "claude-skills-library" / "skills"
 
 SITE_NAME = "Management Unconsulted"  # change here to rename the mindmap's center label
 
